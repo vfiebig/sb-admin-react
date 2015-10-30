@@ -1,7 +1,7 @@
 import React from "react";
-import Router, { Link, RouteHandler } from "react-router";
+import Router, { Link } from "react-router";
 
-import {Navbar, Nav, NavItem, NavDropdown, MenuItem, ProgressBar} from "react-bootstrap";
+import {Navbar, Nav, NavItem, NavDropdown, MenuItem, ProgressBar, NavBrand} from "react-bootstrap";
 import $ from "jQuery";
 import classNames from "classnames";
 
@@ -38,9 +38,12 @@ var HomePage = React.createClass({
     return (
         <div id="wrapper" className="content">
 
-          <Navbar brand={<span><img src={require('../../../common/img/logo.png')} alt="Start React" title="Start React" />
-            <span>&nbsp;SB Admin React - </span>
-            <a href="http://startreact.com/" title="Start React" rel="home">StartReact.com</a></span>} fluid={true}  style={ {margin: 0} }>
+          <Navbar fluid={true}  style={ {margin: 0} }>
+            <NavBrand>
+              <span><img src={require('../../../common/img/logo.png')} alt="Start React" title="Start React" />
+              <span>&nbsp;SB Admin React - </span>
+              <a href="http://startreact.com/" title="Start React" rel="home">StartReact.com</a></span>
+            </NavBrand>
           
             <Nav style={ {margin: 0} } pullRight >
           
@@ -173,7 +176,7 @@ var HomePage = React.createClass({
                   </li>
               
                   <li>
-                    <Link to="dashboard.home"><i className="fa fa-dashboard fa-fw"></i> &nbsp;Dashboard</Link>
+                    <Link to={"dashboard/home"}><i className="fa fa-dashboard fa-fw"></i> &nbsp;Dashboard</Link>
                   </li>
                         
                   <li className={classNames({'active': !this.state.chartsElementsCollapsed})}>
@@ -182,7 +185,7 @@ var HomePage = React.createClass({
                     </a>
                     <ul className={classNames({'nav nav-second-level': true, 'collapse': this.state.chartsElementsCollapsed})}>
                       <li>
-                        <Link to="dashboard.flot-charts">Flot Charts</Link>
+                        <Link to={"dashboard/flot-charts"}>Flot Charts</Link>
                       </li>
                       <li>
                         <Link to="dashboard.morrisjs-charts">Morris.js Charts</Link>
@@ -282,7 +285,7 @@ var HomePage = React.createClass({
           </Navbar>
 
           <div id="page-wrapper" className="page-wrapper" ref="pageWrapper" style={{minHeight: this.state.Height}}>
-            <RouteHandler {...this.props} />
+            {this.props.children}
           </div>
 
         </div>

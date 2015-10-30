@@ -57,7 +57,11 @@ module.exports = {
   // Automatically transform files with these extensions
   resolve: {
     extensions: ['', '.js', '.jsx', '.css'],
-    modulesDirectories: ['node_modules', bootstrapPath, bootstrapSocialPath, fontAwesomePath]
+    modulesDirectories: ['node_modules', bootstrapPath, bootstrapSocialPath, fontAwesomePath],
+    alias: {
+      "react": __dirname + '/node_modules/react',
+      "react/addons": __dirname + '/node_modules/react/addons',
+    }
   },
 
   // Additional plugins for CSS post processing using postcss-loader

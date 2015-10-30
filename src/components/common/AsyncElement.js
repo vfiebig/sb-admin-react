@@ -33,7 +33,6 @@ var AsyncElement = {
     if (Component) {
       // can't find RouteHandler in the loaded component, so we just grab
       // it here first.
-      this.props.activeRoute = <RouteHandler/>;
       return <Component {...this.props}/>;
     }
 

@@ -25,7 +25,7 @@ var Home = React.createClass({
                     linkTo="/" />
           </div>
           <div className="col-lg-3 col-md-6">
-            <StatWidget style = "panel-green"
+            <StatWidget style = "success"
                     icon = "fa fa-tasks fa-5x"
                     count = "12"
                     headerText="New Tasks!" 
@@ -33,7 +33,7 @@ var Home = React.createClass({
                     linkTo="/" />
           </div>
           <div className="col-lg-3 col-md-6">
-            <StatWidget style="panel-yellow"
+            <StatWidget style="warning"
                     icon="fa fa-shopping-cart fa-5x"
                     count="124"
                     headerText="New Orders!" 
@@ -41,7 +41,7 @@ var Home = React.createClass({
                     linkTo="/" />
           </div>
           <div className="col-lg-3 col-md-6">
-            <StatWidget style="panel-red"
+            <StatWidget style="danger"
                     icon="fa fa-support fa-5x"
                     count="13"
                     headerText="Support Tickets!" 
@@ -56,7 +56,7 @@ var Home = React.createClass({
             <Panel header={<span>
               <i className="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
                   <div className="pull-right">
-                      <DropdownButton title="Dropdown" bsSize="xs" pullRight>
+                      <DropdownButton id="dd1" title="Dropdown" bsSize="xs" pullRight>
                         <MenuItem eventKey="1">Action</MenuItem>
                         <MenuItem eventKey="2">Another action</MenuItem>
                         <MenuItem eventKey="3">Something else here</MenuItem>
@@ -75,7 +75,7 @@ var Home = React.createClass({
             <Panel header={<span>
               <i className="fa fa-bar-chart-o fa-fw"></i> Bar Chart Example
                   <div className="pull-right">
-                      <DropdownButton title="Dropdown" bsSize="xs" pullRight>
+                      <DropdownButton id="dd2" title="Dropdown" bsSize="xs" pullRight>
                         <MenuItem eventKey="1">Action</MenuItem>
                         <MenuItem eventKey="2">Another action</MenuItem>
                         <MenuItem eventKey="3">Something else here</MenuItem>
